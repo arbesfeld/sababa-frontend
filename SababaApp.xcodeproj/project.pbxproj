@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55B314CE187096D100B7A426 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314CD187096D100B7A426 /* Foundation.framework */; };
+		55B314D0187096D100B7A426 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314CF187096D100B7A426 /* CoreGraphics.framework */; };
+		55B314D2187096D100B7A426 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314D1187096D100B7A426 /* UIKit.framework */; };
+		55B314D8187096D100B7A426 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55B314D6187096D100B7A426 /* InfoPlist.strings */; };
+		55B314DA187096D100B7A426 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B314D9187096D100B7A426 /* main.m */; };
+		55B314DE187096D100B7A426 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B314DD187096D100B7A426 /* AppDelegate.m */; };
+		55B314E1187096D100B7A426 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B314DF187096D100B7A426 /* Main_iPhone.storyboard */; };
+		55B314E4187096D100B7A426 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B314E2187096D100B7A426 /* Main_iPad.storyboard */; };
+		55B314E7187096D100B7A426 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B314E6187096D100B7A426 /* ViewController.m */; };
+		55B314E9187096D100B7A426 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B314E8187096D100B7A426 /* Images.xcassets */; };
+		55B314F0187096D200B7A426 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314EF187096D200B7A426 /* XCTest.framework */; };
+		55B314F1187096D200B7A426 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314CD187096D100B7A426 /* Foundation.framework */; };
+		55B314F2187096D200B7A426 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314D1187096D100B7A426 /* UIKit.framework */; };
+		55B314FA187096D200B7A426 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55B314F8187096D200B7A426 /* InfoPlist.strings */; };
+		55B314FC187096D200B7A426 /* SababaAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B314FB187096D200B7A426 /* SababaAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55B314F3187096D200B7A426 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55B314C2187096D100B7A426 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55B314C9187096D100B7A426;
+			remoteInfo = SababaApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55B314CA187096D100B7A426 /* SababaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SababaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B314CD187096D100B7A426 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		55B314CF187096D100B7A426 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		55B314D1187096D100B7A426 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		55B314D5187096D100B7A426 /* SababaApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SababaApp-Info.plist"; sourceTree = "<group>"; };
+		55B314D7187096D100B7A426 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55B314D9187096D100B7A426 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55B314DB187096D100B7A426 /* SababaApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SababaApp-Prefix.pch"; sourceTree = "<group>"; };
+		55B314DC187096D100B7A426 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		55B314DD187096D100B7A426 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55B314E0187096D100B7A426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		55B314E3187096D100B7A426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		55B314E5187096D100B7A426 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		55B314E6187096D100B7A426 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		55B314E8187096D100B7A426 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		55B314EE187096D200B7A426 /* SababaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SababaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B314EF187096D200B7A426 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		55B314F7187096D200B7A426 /* SababaAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SababaAppTests-Info.plist"; sourceTree = "<group>"; };
+		55B314F9187096D200B7A426 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55B314FB187096D200B7A426 /* SababaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SababaAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55B314C7187096D100B7A426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B314D0187096D100B7A426 /* CoreGraphics.framework in Frameworks */,
+				55B314D2187096D100B7A426 /* UIKit.framework in Frameworks */,
+				55B314CE187096D100B7A426 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B314EB187096D200B7A426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B314F0187096D200B7A426 /* XCTest.framework in Frameworks */,
+				55B314F2187096D200B7A426 /* UIKit.framework in Frameworks */,
+				55B314F1187096D200B7A426 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55B314C1187096D100B7A426 = {
+			isa = PBXGroup;
+			children = (
+				55B314D3187096D100B7A426 /* SababaApp */,
+				55B314F5187096D200B7A426 /* SababaAppTests */,
+				55B314CC187096D100B7A426 /* Frameworks */,
+				55B314CB187096D100B7A426 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55B314CB187096D100B7A426 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55B314CA187096D100B7A426 /* SababaApp.app */,
+				55B314EE187096D200B7A426 /* SababaAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55B314CC187096D100B7A426 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55B314CD187096D100B7A426 /* Foundation.framework */,
+				55B314CF187096D100B7A426 /* CoreGraphics.framework */,
+				55B314D1187096D100B7A426 /* UIKit.framework */,
+				55B314EF187096D200B7A426 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55B314D3187096D100B7A426 /* SababaApp */ = {
+			isa = PBXGroup;
+			children = (
+				55B314DC187096D100B7A426 /* AppDelegate.h */,
+				55B314DD187096D100B7A426 /* AppDelegate.m */,
+				55B314DF187096D100B7A426 /* Main_iPhone.storyboard */,
+				55B314E2187096D100B7A426 /* Main_iPad.storyboard */,
+				55B314E5187096D100B7A426 /* ViewController.h */,
+				55B314E6187096D100B7A426 /* ViewController.m */,
+				55B314E8187096D100B7A426 /* Images.xcassets */,
+				55B314D4187096D100B7A426 /* Supporting Files */,
+			);
+			path = SababaApp;
+			sourceTree = "<group>";
+		};
+		55B314D4187096D100B7A426 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55B314D5187096D100B7A426 /* SababaApp-Info.plist */,
+				55B314D6187096D100B7A426 /* InfoPlist.strings */,
+				55B314D9187096D100B7A426 /* main.m */,
+				55B314DB187096D100B7A426 /* SababaApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55B314F5187096D200B7A426 /* SababaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				55B314FB187096D200B7A426 /* SababaAppTests.m */,
+				55B314F6187096D200B7A426 /* Supporting Files */,
+			);
+			path = SababaAppTests;
+			sourceTree = "<group>";
+		};
+		55B314F6187096D200B7A426 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55B314F7187096D200B7A426 /* SababaAppTests-Info.plist */,
+				55B314F8187096D200B7A426 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55B314C9187096D100B7A426 /* SababaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55B314FF187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaApp" */;
+			buildPhases = (
+				55B314C6187096D100B7A426 /* Sources */,
+				55B314C7187096D100B7A426 /* Frameworks */,
+				55B314C8187096D100B7A426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SababaApp;
+			productName = SababaApp;
+			productReference = 55B314CA187096D100B7A426 /* SababaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55B314ED187096D200B7A426 /* SababaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55B31502187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaAppTests" */;
+			buildPhases = (
+				55B314EA187096D200B7A426 /* Sources */,
+				55B314EB187096D200B7A426 /* Frameworks */,
+				55B314EC187096D200B7A426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55B314F4187096D200B7A426 /* PBXTargetDependency */,
+			);
+			name = SababaAppTests;
+			productName = SababaAppTests;
+			productReference = 55B314EE187096D200B7A426 /* SababaAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55B314C2187096D100B7A426 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Matthew Arbesfeld";
+				TargetAttributes = {
+					55B314ED187096D200B7A426 = {
+						TestTargetID = 55B314C9187096D100B7A426;
+					};
+				};
+			};
+			buildConfigurationList = 55B314C5187096D100B7A426 /* Build configuration list for PBXProject "SababaApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55B314C1187096D100B7A426;
+			productRefGroup = 55B314CB187096D100B7A426 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55B314C9187096D100B7A426 /* SababaApp */,
+				55B314ED187096D200B7A426 /* SababaAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55B314C8187096D100B7A426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B314E4187096D100B7A426 /* Main_iPad.storyboard in Resources */,
+				55B314E9187096D100B7A426 /* Images.xcassets in Resources */,
+				55B314E1187096D100B7A426 /* Main_iPhone.storyboard in Resources */,
+				55B314D8187096D100B7A426 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B314EC187096D200B7A426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B314FA187096D200B7A426 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55B314C6187096D100B7A426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B314E7187096D100B7A426 /* ViewController.m in Sources */,
+				55B314DE187096D100B7A426 /* AppDelegate.m in Sources */,
+				55B314DA187096D100B7A426 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B314EA187096D200B7A426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B314FC187096D200B7A426 /* SababaAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55B314F4187096D200B7A426 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55B314C9187096D100B7A426 /* SababaApp */;
+			targetProxy = 55B314F3187096D200B7A426 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55B314D6187096D100B7A426 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B314D7187096D100B7A426 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		55B314DF187096D100B7A426 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B314E0187096D100B7A426 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		55B314E2187096D100B7A426 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B314E3187096D100B7A426 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		55B314F8187096D200B7A426 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B314F9187096D200B7A426 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55B314FD187096D200B7A426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55B314FE187096D200B7A426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55B31500187096D200B7A426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SababaApp/SababaApp-Prefix.pch";
+				INFOPLIST_FILE = "SababaApp/SababaApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		55B31501187096D200B7A426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SababaApp/SababaApp-Prefix.pch";
+				INFOPLIST_FILE = "SababaApp/SababaApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		55B31503187096D200B7A426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SababaApp.app/SababaApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SababaApp/SababaApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SababaAppTests/SababaAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		55B31504187096D200B7A426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SababaApp.app/SababaApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SababaApp/SababaApp-Prefix.pch";
+				INFOPLIST_FILE = "SababaAppTests/SababaAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55B314C5187096D100B7A426 /* Build configuration list for PBXProject "SababaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B314FD187096D200B7A426 /* Debug */,
+				55B314FE187096D200B7A426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55B314FF187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B31500187096D200B7A426 /* Debug */,
+				55B31501187096D200B7A426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55B31502187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B31503187096D200B7A426 /* Debug */,
+				55B31504187096D200B7A426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55B314C2187096D100B7A426 /* Project object */;
+}
