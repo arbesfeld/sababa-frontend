@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4D7271BF-2E3E-48DC-B00D-692CBE536FD7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SababaApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3BED3C55-2765-439F-B4E7-EA0D6779B951</key>
+		<string>https://github.com/arbesfeld/sababa-frontend.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SababaApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3BED3C55-2765-439F-B4E7-EA0D6779B951</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/arbesfeld/sababa-frontend.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3BED3C55-2765-439F-B4E7-EA0D6779B951</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3BED3C55-2765-439F-B4E7-EA0D6779B951</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SababaApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

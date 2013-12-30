@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TopicViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface TopicViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, NSURLConnectionDelegate>
+{
+    NSMutableData* _articleData;
+}
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingView;
 
-- (IBAction)startAction:(id)sender;
 
 @end

@@ -10,12 +10,15 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface TopicCell : UICollectionViewCell
-
+{
+    int _index;
+}
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (assign, nonatomic) BOOL isSelected;
+
 -(void) set:(int)index;
 -(void) select;
+-(void) selectSpecial;
 -(void) deselect;
 
 @end

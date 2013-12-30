@@ -16,7 +16,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _isSelected = NO;
         self.backgroundColor = [UIColor colorWithWhite:START_COLOR alpha:1.0];
         
     }
@@ -25,33 +24,55 @@
 
 -(void) set:(int)index
 {
+    _index = index;
     switch (index) {
         case 0:
             _titleLabel.text = @"Sports";
             _imageView.image = [UIImage imageNamed:@"sports-icon.png"];
             
             break;
+            
         case 1:
             _titleLabel.text = @"Art";
+            _imageView.image = [UIImage imageNamed:@"art-icon.png"];
+            
             break;
+            
         case 2:
             _titleLabel.text = @"Business";
+            _imageView.image = [UIImage imageNamed:@"business-icon.png"];
+            
             break;
+            
         case 3:
             _titleLabel.text = @"Technology";
+            _imageView.image = [UIImage imageNamed:@"technology-icon.png"];
+            
             break;
+            
         case 4:
             _titleLabel.text = @"Politics";
+            _imageView.image = [UIImage imageNamed:@"politics-icon.png"];
+            
             break;
+            
         case 5:
             _titleLabel.text = @"Health";
+            _imageView.image = [UIImage imageNamed:@"health-icon.png"];
+            
             break;
+            
         case 6:
             _titleLabel.text = @"Entertainment";
             _titleLabel.font = [UIFont systemFontOfSize:11];
+            _imageView.image = [UIImage imageNamed:@"movie-icon.png"];
+            
             break;
+            
         case 7:
             _titleLabel.text = @"Science";
+            _imageView.image = [UIImage imageNamed:@"science-icon.png"];
+            
             break;
             
         default:
@@ -65,13 +86,16 @@
 
 -(void) select
 {
-    _isSelected = YES;
-    self.backgroundColor = [UIColor colorWithWhite:0.6 alpha:1.0];
+    self.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1.0];
+}
+
+-(void) selectSpecial
+{
+    self.backgroundColor = [UIColor colorWithHue:_index/8.0 saturation:0.3 brightness:0.85 alpha:1.0];
 }
 
 -(void) deselect
 {
-    _isSelected = NO;
     self.backgroundColor = [UIColor colorWithWhite:START_COLOR alpha:1.0];
 }
 

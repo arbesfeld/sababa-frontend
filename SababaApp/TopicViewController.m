@@ -8,6 +8,7 @@
 
 #import "TopicViewController.h"
 #import "TopicCell.h"
+#import "WebViewController.h"
 
 @interface TopicViewController ()
 
@@ -15,25 +16,31 @@
 
 @implementation TopicViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    [self loading:NO];
+    self.navigationItem.hidesBackButton = YES;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)loading:(BOOL)isLoading
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if (isLoading) {
+        _loadingView.hidden = NO;
+        for (int i = 0; i < 8; i++) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+            TopicCell *cell = (TopicCell *)[_collectionView cellForItemAtIndexPath:indexPath];
+            [cell select];
+        }
+    } else {
+        _loadingView.hidden = YES;
+        for (int i = 0; i < 8; i++) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+            TopicCell *cell = (TopicCell *)[_collectionView cellForItemAtIndexPath:indexPath];
+            [cell deselect];
+        }
+    }
 }
 
 #pragma mark - UICollectionView Datasource
@@ -49,37 +56,77 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TopicCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"TopicCell" forIndexPath:indexPath];
     [cell set:indexPath.row];
-
     return cell;
 }
-
-/*- (UICollectionReusableView *)collectionView:
- (UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
- {
- return [[UICollectionReusableView alloc] init];
- }*/
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     TopicCell *cell = (TopicCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    if (cell.isSelected) {
-        [cell deselect];
-    } else {
-        [cell select];
-    }
+
+    [self loading:YES];
+    [cell selectSpecial];
+    
+    NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
+    NSString *idString = [oNSUUID UUIDString];
+    
+    NSString *url = [NSString stringWithFormat:@"%@user/%@/article/%@", BASE_URL, idString, cell.titleLabel.text];
+    NSLog(@"Getting %@", url);
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    _articleData = [[NSMutableData alloc] init];
+    [connection start];
 }
+
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [_articleData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"Fail");
+    _articleData = nil;
+    [self loading:NO];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    if (!_articleData) {
+        NSLog(@"No article data");
+        return;
+    }
+    
+    NSError* error;
+    NSDictionary* json = [NSJSONSerialization
+                          JSONObjectWithData:_articleData
+                          options:kNilOptions
+                          error:&error];
+    
+    if (error) {
+        NSLog(@"Error converting to json, %@", [error localizedDescription]);
+    }
+    
+    NSLog(@"%@",json);
+    _articleData = nil;
+    
+    WebViewController *webViewer = [self.storyboard instantiateViewControllerWithIdentifier:@"WebViewController"];
+    [webViewer setContent:json];
+    [self presentViewController:webViewer animated:YES completion:nil];
+}
+
 #pragma mark – UICollectionViewDelegateFlowLayout
 
-// 1
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(88, 88);
 }
-// 3
+
 - (UIEdgeInsets)collectionView:
 (UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(18, 18, 18, 18);
 }
-- (IBAction)startAction:(id)sender {
-}
+
 @end

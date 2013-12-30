@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55A3AB331871A3B6008CF162 /* business-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AB321871A3B6008CF162 /* business-icon.png */; };
+		55A3AB351871A3C0008CF162 /* technology-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AB341871A3C0008CF162 /* technology-icon.png */; };
+		55A3AB371871A3D4008CF162 /* politics-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AB361871A3D4008CF162 /* politics-icon.png */; };
+		55A3AB3D1871A3EC008CF162 /* science-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AB3C1871A3EC008CF162 /* science-icon.png */; };
+		55A3AB3F1871A597008CF162 /* health-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AB3E1871A597008CF162 /* health-icon.png */; };
+		55A3AB411871A5D4008CF162 /* movie-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AB401871A5D3008CF162 /* movie-icon.png */; };
+		55A3AB441871AC09008CF162 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A3AB431871AC09008CF162 /* WebViewController.m */; };
 		55B314CE187096D100B7A426 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314CD187096D100B7A426 /* Foundation.framework */; };
 		55B314D0187096D100B7A426 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314CF187096D100B7A426 /* CoreGraphics.framework */; };
 		55B314D2187096D100B7A426 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314D1187096D100B7A426 /* UIKit.framework */; };
@@ -28,6 +35,7 @@
 		55B315181871919B00B7A426 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B315171871919B00B7A426 /* QuartzCore.framework */; };
 		55B3151F18719E1900B7A426 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55B3151E18719E1900B7A426 /* fontawesome-webfont.ttf */; };
 		55B3152118719E9F00B7A426 /* sports-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B3152018719E9F00B7A426 /* sports-icon.png */; };
+		55B315231871A05D00B7A426 /* art-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B315221871A05D00B7A426 /* art-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55A3AB321871A3B6008CF162 /* business-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "business-icon.png"; sourceTree = "<group>"; };
+		55A3AB341871A3C0008CF162 /* technology-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technology-icon.png"; sourceTree = "<group>"; };
+		55A3AB361871A3D4008CF162 /* politics-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "politics-icon.png"; sourceTree = "<group>"; };
+		55A3AB3C1871A3EC008CF162 /* science-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "science-icon.png"; sourceTree = "<group>"; };
+		55A3AB3E1871A597008CF162 /* health-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "health-icon.png"; sourceTree = "<group>"; };
+		55A3AB401871A5D3008CF162 /* movie-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "movie-icon.png"; sourceTree = "<group>"; };
+		55A3AB421871AC09008CF162 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		55A3AB431871AC09008CF162 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		55B314CA187096D100B7A426 /* SababaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SababaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B314CD187096D100B7A426 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		55B314CF187096D100B7A426 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +86,7 @@
 		55B315171871919B00B7A426 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		55B3151E18719E1900B7A426 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		55B3152018719E9F00B7A426 /* sports-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sports-icon.png"; sourceTree = "<group>"; };
+		55B315221871A05D00B7A426 /* art-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "art-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55A3AB451871B06B008CF162 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				55A3AB421871AC09008CF162 /* WebViewController.h */,
+				55A3AB431871AC09008CF162 /* WebViewController.m */,
+			);
+			name = WebView;
+			sourceTree = "<group>";
+		};
 		55B314C1187096D100B7A426 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +161,7 @@
 				55B314DD187096D100B7A426 /* AppDelegate.m */,
 				55B314DF187096D100B7A426 /* Main_iPhone.storyboard */,
 				55B314E2187096D100B7A426 /* Main_iPad.storyboard */,
+				55A3AB451871B06B008CF162 /* WebView */,
 				55B315121871830C00B7A426 /* Startup */,
 				55B31516187184C900B7A426 /* Topics */,
 				55B314E8187096D100B7A426 /* Images.xcassets */,
@@ -199,6 +226,13 @@
 		55B3151B18719C4100B7A426 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				55B315221871A05D00B7A426 /* art-icon.png */,
+				55A3AB341871A3C0008CF162 /* technology-icon.png */,
+				55A3AB361871A3D4008CF162 /* politics-icon.png */,
+				55A3AB401871A5D3008CF162 /* movie-icon.png */,
+				55A3AB3E1871A597008CF162 /* health-icon.png */,
+				55A3AB3C1871A3EC008CF162 /* science-icon.png */,
+				55A3AB321871A3B6008CF162 /* business-icon.png */,
 				55B3152018719E9F00B7A426 /* sports-icon.png */,
 			);
 			name = Icons;
@@ -281,11 +315,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				55B314E4187096D100B7A426 /* Main_iPad.storyboard in Resources */,
+				55A3AB3F1871A597008CF162 /* health-icon.png in Resources */,
+				55A3AB3D1871A3EC008CF162 /* science-icon.png in Resources */,
 				55B3152118719E9F00B7A426 /* sports-icon.png in Resources */,
+				55B315231871A05D00B7A426 /* art-icon.png in Resources */,
 				55B314E9187096D100B7A426 /* Images.xcassets in Resources */,
 				55B3151F18719E1900B7A426 /* fontawesome-webfont.ttf in Resources */,
+				55A3AB371871A3D4008CF162 /* politics-icon.png in Resources */,
+				55A3AB351871A3C0008CF162 /* technology-icon.png in Resources */,
 				55B314E1187096D100B7A426 /* Main_iPhone.storyboard in Resources */,
+				55A3AB331871A3B6008CF162 /* business-icon.png in Resources */,
 				55B314D8187096D100B7A426 /* InfoPlist.strings in Resources */,
+				55A3AB411871A5D4008CF162 /* movie-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55B314E7187096D100B7A426 /* FirstOptionViewController.m in Sources */,
+				55A3AB441871AC09008CF162 /* WebViewController.m in Sources */,
 				55B31515187184BF00B7A426 /* TopicCell.m in Sources */,
 				55B314DE187096D100B7A426 /* AppDelegate.m in Sources */,
 				55B314DA187096D100B7A426 /* main.m in Sources */,
@@ -528,6 +570,7 @@
 				55B31501187096D200B7A426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55B31502187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaAppTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +579,7 @@
 				55B31504187096D200B7A426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstOptionViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
-@property (weak, nonatomic) IBOutlet UIPickerView *choosePicker;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UIButton *continueButton;
 
 - (IBAction)continueAction:(id)sender;

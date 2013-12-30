@@ -54,7 +54,36 @@
 }
 
 - (IBAction)continueAction:(id)sender {
-    NSLog(@"Continue");
+    NSUInteger selectedRow = [_pickerView selectedRowInComponent:0];
+    NSString *language = [[_pickerView delegate] pickerView:_pickerView titleForRow:selectedRow forComponent:0];
+    
+    NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
+    NSString *idString = [oNSUUID UUIDString];
+    
+    NSString *postURL = [NSString stringWithFormat:@"%@user/%@", BASE_URL, idString];
+    NSDictionary *json = [[NSDictionary alloc] initWithObjectsAndKeys:
+                          language, @"native",
+                          nil];
+    NSError *error;
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:json options:0 error:&error];
+    
+    NSLog(@"POST: %@", postURL);
+    NSLog(@"POST_DATA: %@", json);
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:postURL]];
+    [request setHTTPMethod: @"POST"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"content-type"];
+    [request setHTTPBody:postData ];
+    
+    NSURLResponse *response;
+    NSError *err;
+    NSData *returnData = [ NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSString *content = [[NSString alloc] initWithData:returnData encoding:NSASCIIStringEncoding];
+    
+    if (err) {
+        NSLog(@"Error: %@", [err localizedDescription]);
+    }
+    NSLog(@"responseData: %@", content);
 }
 
 @end
