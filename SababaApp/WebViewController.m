@@ -91,6 +91,7 @@
     _translateLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _translateLabel.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
     _translateLabel.layer.cornerRadius = 3.0f;
+    _translateLabel.font = [UIFont systemFontOfSize:24];
     [_scrollView addSubview:_translateLabel];
     [_scrollView bringSubviewToFront:_translateLabel];
     self.navigationItem.backBarButtonItem = nil;
@@ -155,11 +156,11 @@
 
 - (int)addImage:(NSURL *)url currentHeight:(int)currentHeight
 {
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(20, currentHeight + 30, 280, 280)];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(20, currentHeight + 30, 280, 180)];
     imgView.contentMode = UIViewContentModeScaleAspectFit;
     [imgView setImageWithURL:url];
     [_scrollView addSubview:imgView];
-    return currentHeight + 280;
+    return currentHeight + 180;
 }
 
 - (void)nextArticle

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "55B314C9187096D100B7A426"
-               BuildableName = "SababaApp.app"
+               BuildableName = "Sababa.app"
                BlueprintName = "Sababa"
                ReferencedContainer = "container:Sababa.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "55B314ED187096D200B7A426"
-               BuildableName = "SababaAppTests.xctest"
+               BuildableName = "SababaTests.xctest"
                BlueprintName = "SababaTests"
                ReferencedContainer = "container:Sababa.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55B314C9187096D100B7A426"
-            BuildableName = "SababaApp.app"
+            BuildableName = "Sababa.app"
             BlueprintName = "Sababa"
             ReferencedContainer = "container:Sababa.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55B314C9187096D100B7A426"
-            BuildableName = "SababaApp.app"
+            BuildableName = "Sababa.app"
             BlueprintName = "Sababa"
             ReferencedContainer = "container:Sababa.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55B314C9187096D100B7A426"
-            BuildableName = "SababaApp.app"
+            BuildableName = "Sababa.app"
             BlueprintName = "Sababa"
             ReferencedContainer = "container:Sababa.xcodeproj">
          </BuildableReference>

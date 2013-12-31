@@ -122,7 +122,10 @@
     
     WebViewController *webViewer = [self.storyboard instantiateViewControllerWithIdentifier:@"WebViewController"];
     [webViewer setContent:json];
-    webViewer.navigationItem.hidesBackButton = YES;
+    self.navigationItem.backBarButtonItem =
+    [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                     style:UIBarButtonItemStyleBordered
+                                    target:nil action:nil];
     [self.navigationController pushViewController:webViewer animated:YES];
 }
 

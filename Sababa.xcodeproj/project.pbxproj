@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		553296161872E52B00FF80E5 /* icon57x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 553296151872E52B00FF80E5 /* icon57x1.png */; };
+		553296181872E59A00FF80E5 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 553296171872E59A00FF80E5 /* icon114.png */; };
 		55A3AB331871A3B6008CF162 /* business-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AB321871A3B6008CF162 /* business-icon.png */; };
 		55A3AB351871A3C0008CF162 /* technology-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AB341871A3C0008CF162 /* technology-icon.png */; };
 		55A3AB371871A3D4008CF162 /* politics-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A3AB361871A3D4008CF162 /* politics-icon.png */; };
@@ -33,7 +35,6 @@
 		55AE678E1872BD9600832709 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AE67801872BD9600832709 /* UIImageView+WebCache.m */; };
 		55AE67911872D8C700832709 /* Icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE67901872D8C700832709 /* Icon1024.png */; };
 		55AE67931872D99B00832709 /* icon60.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE67921872D99B00832709 /* icon60.png */; };
-		55AE67951872DDD100832709 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE67941872DDD100832709 /* icon57.png */; };
 		55B314CE187096D100B7A426 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314CD187096D100B7A426 /* Foundation.framework */; };
 		55B314D0187096D100B7A426 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314CF187096D100B7A426 /* CoreGraphics.framework */; };
 		55B314D2187096D100B7A426 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314D1187096D100B7A426 /* UIKit.framework */; };
@@ -69,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		553296151872E52B00FF80E5 /* icon57x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57x1.png; sourceTree = "<group>"; };
+		553296171872E59A00FF80E5 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
 		55A3AB321871A3B6008CF162 /* business-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "business-icon.png"; sourceTree = "<group>"; };
 		55A3AB341871A3C0008CF162 /* technology-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technology-icon.png"; sourceTree = "<group>"; };
 		55A3AB361871A3D4008CF162 /* politics-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "politics-icon.png"; sourceTree = "<group>"; };
@@ -112,7 +115,6 @@
 		55AE67801872BD9600832709 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		55AE67901872D8C700832709 /* Icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon1024.png; sourceTree = "<group>"; };
 		55AE67921872D99B00832709 /* icon60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon60.png; sourceTree = "<group>"; };
-		55AE67941872DDD100832709 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
 		55B314CA187096D100B7A426 /* Sababa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sababa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B314CD187096D100B7A426 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		55B314CF187096D100B7A426 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -323,7 +325,8 @@
 		55B3151B18719C4100B7A426 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				55AE67941872DDD100832709 /* icon57.png */,
+				553296171872E59A00FF80E5 /* icon114.png */,
+				553296151872E52B00FF80E5 /* icon57x1.png */,
 				55AE67901872D8C700832709 /* Icon1024.png */,
 				55AE67921872D99B00832709 /* icon60.png */,
 				55A3AB4618720322008CF162 /* random-icon.png */,
@@ -386,6 +389,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Matthew Arbesfeld";
 				TargetAttributes = {
+					55B314C9187096D100B7A426 = {
+						DevelopmentTeam = YLEHRJ86G2;
+					};
 					55B314ED187096D200B7A426 = {
 						TestTargetID = 55B314C9187096D100B7A426;
 					};
@@ -426,10 +432,11 @@
 				55A3AB351871A3C0008CF162 /* technology-icon.png in Resources */,
 				55A3AB4718720322008CF162 /* random-icon.png in Resources */,
 				55B314E1187096D100B7A426 /* Main_iPhone.storyboard in Resources */,
+				553296181872E59A00FF80E5 /* icon114.png in Resources */,
 				55A3AB331871A3B6008CF162 /* business-icon.png in Resources */,
 				55AE67931872D99B00832709 /* icon60.png in Resources */,
-				55AE67951872DDD100832709 /* icon57.png in Resources */,
 				55AE67911872D8C700832709 /* Icon1024.png in Resources */,
+				553296161872E52B00FF80E5 /* icon57x1.png in Resources */,
 				55B314D8187096D100B7A426 /* InfoPlist.strings in Resources */,
 				55A3AB411871A5D4008CF162 /* movie-icon.png in Resources */,
 			);
@@ -608,11 +615,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SababaApp/Sababa-Prefix.pch";
 				INFOPLIST_FILE = "SababaApp/Sababa-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = Sababa;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -623,12 +633,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Matthew Arbesfeld (YLEHRJ86G2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SababaApp/Sababa-Prefix.pch";
 				INFOPLIST_FILE = "SababaApp/Sababa-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = Sababa;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
