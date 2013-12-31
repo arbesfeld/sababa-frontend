@@ -7,6 +7,7 @@
 //
 #import <QuartzCore/QuartzCore.h>
 #import "WebViewController.h"
+#import "UIImageView+WebCache.h"
 
 #define INSET 5
 @interface WebViewController ()
@@ -56,7 +57,7 @@
     
     NSString *contentText = [articles valueForKey:@"text"];
     _contentLabel.delegate = self;
-    _contentLabel.text = @"Mother hello hi mother"; //contentText;
+    _contentLabel.text = contentText;
     [_contentLabel sizeToFit];
     NSString *word = @"mother";
     NSRange range = [_contentLabel.text rangeOfString:word];
@@ -64,10 +65,13 @@
     NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
     NSString *idString = [oNSUUID UUIDString];
     
-    NSString *url = [NSString stringWithFormat:@"%@user/%@/translate/%@", BASE_URL, idString, word];
-    NSLog(@"Getting %@", url);
+    NSArray *words = [_args objectForKey:@"words"];
     
-    [_contentLabel addLinkToURL:[NSURL URLWithString:url ] withRange:range];
+    for (NSString *word in words) {
+        NSString *url = [NSString stringWithFormat:@"%@user/%@/translate/%@", BASE_URL, idString, word];
+        [_contentLabel addLinkToURL:[NSURL URLWithString:url ] withRange:range];
+    }
+    
     _contentLabel.frame = CGRectMake(20, currentHeight + 80, _contentLabel.frame.size.width, _contentLabel.frame.size.height);
     currentHeight = _contentLabel.frame.origin.y + _contentLabel.frame.size.height;
     
@@ -79,7 +83,7 @@
     nextArticleButton.titleLabel.font = [UIFont systemFontOfSize:22];
     [nextArticleButton setTitle:@"Next Article" forState:UIControlStateNormal];
     
-    [_scrollView setContentSize:CGSizeMake(320, _contentLabel.frame.origin.y + _contentLabel.frame.size.height + 120)];
+    [_scrollView setContentSize:CGSizeMake(320, _contentLabel.frame.origin.y + _contentLabel.frame.size.height + 130)];
     [_scrollView addSubview:_titleLabel];
     [_scrollView addSubview:_contentLabel];
     [_scrollView addSubview:nextArticleButton];
@@ -152,14 +156,11 @@
 
 - (int)addImage:(NSURL *)url currentHeight:(int)currentHeight
 {
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    UIImage *img = [[UIImage alloc] initWithData:data];
-    CGSize size = img.size;
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(20, currentHeight + 40, MIN(280, size.width), size.height)];
-    imgView.contentMode = UIViewContentModeScaleAspectFill;
-    imgView.image = img;
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(20, currentHeight + 30, 280, 280)];
+    imgView.contentMode = UIViewContentModeScaleAspectFit;
+    [imgView setImageWithURL:url];
     [_scrollView addSubview:imgView];
-    return currentHeight + size.height;
+    return currentHeight + 280;
 }
 
 - (void)nextArticle
@@ -182,7 +183,7 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:headerText
                                                    message:message
                                                   delegate:self
-                                         cancelButtonTitle:nil
+                                         cancelButtonTitle:@"Back to Article"
                                          otherButtonTitles:choiceArray[0], choiceArray[1], choiceArray[2], nil];
     
     _answerText = [question objectForKey:@"answerText"];
@@ -193,8 +194,18 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSString *finalString = buttonIndex == _answerNum - 1 ? @"correct" : @"incorrect";
-
+    if (buttonIndex == [alertView cancelButtonIndex])
+        return;
+    
+    if (_endAlert == alertView) {
+        UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TopicViewController"];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        
+        [self presentViewController:navigationController animated:YES completion:nil];
+        return;
+    }
+    
+    NSString *finalString = buttonIndex == _answerNum ? @"correct" : @"incorrect";
     
     NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
     NSString *idString = [oNSUUID UUIDString];
@@ -210,10 +221,23 @@
         NSLog(@"%@", [response description]);
     }];
     
-    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TopicViewController"];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    NSString *title = buttonIndex == _answerNum ? @"Correct!" : @"Incorrect.";
+    NSString *choice;
+    switch (_answerNum){
+        case 1:
+            choice = @"A";
+            break;
+        case 2:
+            choice = @"B";
+            break;
+        case 3:
+            choice = @"C";
+            break;
+    }
+    NSString *message = [NSString stringWithFormat:@"The correct answer was %@: %@", choice, _answerText];
     
-    [self presentViewController:navigationController animated:YES completion:nil];
+    _endAlert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"Done", nil];
+    [_endAlert show];
 }
 
 - (void)setContent:(NSDictionary *)args

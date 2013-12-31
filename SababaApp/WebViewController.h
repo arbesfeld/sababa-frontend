@@ -15,6 +15,7 @@
     NSString *_answerText;
     int _answerNum;
     NSMutableData *_translationData;
+    UIAlertView *_endAlert;
 }
 @property (strong, nonatomic) UILabel *translateLabel;
 
