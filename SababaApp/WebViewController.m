@@ -59,8 +59,6 @@
     _contentLabel.delegate = self;
     _contentLabel.text = contentText;
     [_contentLabel sizeToFit];
-    NSString *word = @"mother";
-    NSRange range = [_contentLabel.text rangeOfString:word];
     
     NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
     NSString *idString = [oNSUUID UUIDString];
@@ -68,6 +66,7 @@
     NSArray *words = [_args objectForKey:@"words"];
     
     for (NSString *word in words) {
+        NSRange range = [_contentLabel.text rangeOfString:word];
         NSString *url = [NSString stringWithFormat:@"%@user/%@/translate/%@", BASE_URL, idString, word];
         [_contentLabel addLinkToURL:[NSURL URLWithString:url ] withRange:range];
     }
@@ -205,7 +204,7 @@
         return;
     }
     
-    NSString *finalString = buttonIndex == _answerNum ? @"correct" : @"incorrect";
+    NSString *finalString = buttonIndex - 1 == _answerNum ? @"correct" : @"incorrect";
     
     NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
     NSString *idString = [oNSUUID UUIDString];
@@ -221,20 +220,21 @@
         NSLog(@"%@", [response description]);
     }];
     
-    NSString *title = buttonIndex == _answerNum ? @"Correct!" : @"Incorrect.";
+    NSString *title = buttonIndex - 1 == _answerNum ? @"Correct!" : @"Incorrect.";
     NSString *choice;
     switch (_answerNum){
-        case 1:
+        case 0:
             choice = @"A";
             break;
-        case 2:
+        case 1:
             choice = @"B";
             break;
-        case 3:
+        case 2:
             choice = @"C";
             break;
     }
-    NSString *message = [NSString stringWithFormat:@"The correct answer was %@: %@", choice, _answerText];
+    NSLog(@"%d %d", buttonIndex, _answerNum);
+    NSString *message = [NSString stringWithFormat:@"The correct answer was %@: %@.", choice, _answerText];
     
     _endAlert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"Done", nil];
     [_endAlert show];

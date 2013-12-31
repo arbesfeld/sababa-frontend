@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "55B314C9187096D100B7A426"
                BuildableName = "SababaApp.app"
-               BlueprintName = "SababaApp"
-               ReferencedContainer = "container:SababaApp.xcodeproj">
+               BlueprintName = "Sababa"
+               ReferencedContainer = "container:Sababa.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "55B314ED187096D200B7A426"
                BuildableName = "SababaAppTests.xctest"
-               BlueprintName = "SababaAppTests"
-               ReferencedContainer = "container:SababaApp.xcodeproj">
+               BlueprintName = "SababaTests"
+               ReferencedContainer = "container:Sababa.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55B314C9187096D100B7A426"
             BuildableName = "SababaApp.app"
-            BlueprintName = "SababaApp"
-            ReferencedContainer = "container:SababaApp.xcodeproj">
+            BlueprintName = "Sababa"
+            ReferencedContainer = "container:Sababa.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55B314C9187096D100B7A426"
             BuildableName = "SababaApp.app"
-            BlueprintName = "SababaApp"
-            ReferencedContainer = "container:SababaApp.xcodeproj">
+            BlueprintName = "Sababa"
+            ReferencedContainer = "container:Sababa.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55B314C9187096D100B7A426"
             BuildableName = "SababaApp.app"
-            BlueprintName = "SababaApp"
-            ReferencedContainer = "container:SababaApp.xcodeproj">
+            BlueprintName = "Sababa"
+            ReferencedContainer = "container:Sababa.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -31,6 +31,9 @@
 		55AE678C1872BD9600832709 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AE677C1872BD9600832709 /* UIImage+MultiFormat.m */; };
 		55AE678D1872BD9600832709 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AE677E1872BD9600832709 /* UIImage+WebP.m */; };
 		55AE678E1872BD9600832709 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AE67801872BD9600832709 /* UIImageView+WebCache.m */; };
+		55AE67911872D8C700832709 /* Icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE67901872D8C700832709 /* Icon1024.png */; };
+		55AE67931872D99B00832709 /* icon60.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE67921872D99B00832709 /* icon60.png */; };
+		55AE67951872DDD100832709 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE67941872DDD100832709 /* icon57.png */; };
 		55B314CE187096D100B7A426 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314CD187096D100B7A426 /* Foundation.framework */; };
 		55B314D0187096D100B7A426 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314CF187096D100B7A426 /* CoreGraphics.framework */; };
 		55B314D2187096D100B7A426 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B314D1187096D100B7A426 /* UIKit.framework */; };
@@ -107,14 +110,17 @@
 		55AE677E1872BD9600832709 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		55AE677F1872BD9600832709 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		55AE67801872BD9600832709 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		55B314CA187096D100B7A426 /* SababaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SababaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AE67901872D8C700832709 /* Icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon1024.png; sourceTree = "<group>"; };
+		55AE67921872D99B00832709 /* icon60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon60.png; sourceTree = "<group>"; };
+		55AE67941872DDD100832709 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
+		55B314CA187096D100B7A426 /* Sababa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sababa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B314CD187096D100B7A426 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		55B314CF187096D100B7A426 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		55B314D1187096D100B7A426 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		55B314D5187096D100B7A426 /* SababaApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SababaApp-Info.plist"; sourceTree = "<group>"; };
+		55B314D5187096D100B7A426 /* Sababa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sababa-Info.plist"; sourceTree = "<group>"; };
 		55B314D7187096D100B7A426 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55B314D9187096D100B7A426 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		55B314DB187096D100B7A426 /* SababaApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SababaApp-Prefix.pch"; sourceTree = "<group>"; };
+		55B314DB187096D100B7A426 /* Sababa-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sababa-Prefix.pch"; sourceTree = "<group>"; };
 		55B314DC187096D100B7A426 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55B314DD187096D100B7A426 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		55B314E0187096D100B7A426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -122,9 +128,9 @@
 		55B314E5187096D100B7A426 /* FirstOptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstOptionViewController.h; sourceTree = "<group>"; };
 		55B314E6187096D100B7A426 /* FirstOptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstOptionViewController.m; sourceTree = "<group>"; };
 		55B314E8187096D100B7A426 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		55B314EE187096D200B7A426 /* SababaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SababaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B314EE187096D200B7A426 /* SababaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SababaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B314EF187096D200B7A426 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		55B314F7187096D200B7A426 /* SababaAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SababaAppTests-Info.plist"; sourceTree = "<group>"; };
+		55B314F7187096D200B7A426 /* SababaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SababaTests-Info.plist"; sourceTree = "<group>"; };
 		55B314F9187096D200B7A426 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55B314FB187096D200B7A426 /* SababaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SababaAppTests.m; sourceTree = "<group>"; };
 		55B3150C18717D8C00B7A426 /* SecondOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondOptionViewController.h; sourceTree = "<group>"; };
@@ -223,8 +229,8 @@
 		55B314CB187096D100B7A426 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55B314CA187096D100B7A426 /* SababaApp.app */,
-				55B314EE187096D200B7A426 /* SababaAppTests.xctest */,
+				55B314CA187096D100B7A426 /* Sababa.app */,
+				55B314EE187096D200B7A426 /* SababaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,10 +272,10 @@
 			children = (
 				55B3151E18719E1900B7A426 /* fontawesome-webfont.ttf */,
 				55B3151B18719C4100B7A426 /* Icons */,
-				55B314D5187096D100B7A426 /* SababaApp-Info.plist */,
+				55B314D5187096D100B7A426 /* Sababa-Info.plist */,
 				55B314D6187096D100B7A426 /* InfoPlist.strings */,
 				55B314D9187096D100B7A426 /* main.m */,
-				55B314DB187096D100B7A426 /* SababaApp-Prefix.pch */,
+				55B314DB187096D100B7A426 /* Sababa-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -286,7 +292,7 @@
 		55B314F6187096D200B7A426 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				55B314F7187096D200B7A426 /* SababaAppTests-Info.plist */,
+				55B314F7187096D200B7A426 /* SababaTests-Info.plist */,
 				55B314F8187096D200B7A426 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -317,6 +323,9 @@
 		55B3151B18719C4100B7A426 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				55AE67941872DDD100832709 /* icon57.png */,
+				55AE67901872D8C700832709 /* Icon1024.png */,
+				55AE67921872D99B00832709 /* icon60.png */,
 				55A3AB4618720322008CF162 /* random-icon.png */,
 				55B315221871A05D00B7A426 /* art-icon.png */,
 				55A3AB341871A3C0008CF162 /* technology-icon.png */,
@@ -333,9 +342,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55B314C9187096D100B7A426 /* SababaApp */ = {
+		55B314C9187096D100B7A426 /* Sababa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55B314FF187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaApp" */;
+			buildConfigurationList = 55B314FF187096D200B7A426 /* Build configuration list for PBXNativeTarget "Sababa" */;
 			buildPhases = (
 				55B314C6187096D100B7A426 /* Sources */,
 				55B314C7187096D100B7A426 /* Frameworks */,
@@ -345,14 +354,14 @@
 			);
 			dependencies = (
 			);
-			name = SababaApp;
+			name = Sababa;
 			productName = SababaApp;
-			productReference = 55B314CA187096D100B7A426 /* SababaApp.app */;
+			productReference = 55B314CA187096D100B7A426 /* Sababa.app */;
 			productType = "com.apple.product-type.application";
 		};
-		55B314ED187096D200B7A426 /* SababaAppTests */ = {
+		55B314ED187096D200B7A426 /* SababaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55B31502187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaAppTests" */;
+			buildConfigurationList = 55B31502187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaTests" */;
 			buildPhases = (
 				55B314EA187096D200B7A426 /* Sources */,
 				55B314EB187096D200B7A426 /* Frameworks */,
@@ -363,9 +372,9 @@
 			dependencies = (
 				55B314F4187096D200B7A426 /* PBXTargetDependency */,
 			);
-			name = SababaAppTests;
+			name = SababaTests;
 			productName = SababaAppTests;
-			productReference = 55B314EE187096D200B7A426 /* SababaAppTests.xctest */;
+			productReference = 55B314EE187096D200B7A426 /* SababaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -382,7 +391,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 55B314C5187096D100B7A426 /* Build configuration list for PBXProject "SababaApp" */;
+			buildConfigurationList = 55B314C5187096D100B7A426 /* Build configuration list for PBXProject "Sababa" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -395,8 +404,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55B314C9187096D100B7A426 /* SababaApp */,
-				55B314ED187096D200B7A426 /* SababaAppTests */,
+				55B314C9187096D100B7A426 /* Sababa */,
+				55B314ED187096D200B7A426 /* SababaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -418,6 +427,9 @@
 				55A3AB4718720322008CF162 /* random-icon.png in Resources */,
 				55B314E1187096D100B7A426 /* Main_iPhone.storyboard in Resources */,
 				55A3AB331871A3B6008CF162 /* business-icon.png in Resources */,
+				55AE67931872D99B00832709 /* icon60.png in Resources */,
+				55AE67951872DDD100832709 /* icon57.png in Resources */,
+				55AE67911872D8C700832709 /* Icon1024.png in Resources */,
 				55B314D8187096D100B7A426 /* InfoPlist.strings in Resources */,
 				55A3AB411871A5D4008CF162 /* movie-icon.png in Resources */,
 			);
@@ -476,7 +488,7 @@
 /* Begin PBXTargetDependency section */
 		55B314F4187096D200B7A426 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 55B314C9187096D100B7A426 /* SababaApp */;
+			target = 55B314C9187096D100B7A426 /* Sababa */;
 			targetProxy = 55B314F3187096D200B7A426 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -597,9 +609,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SababaApp/SababaApp-Prefix.pch";
-				INFOPLIST_FILE = "SababaApp/SababaApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SababaApp/Sababa-Prefix.pch";
+				INFOPLIST_FILE = "SababaApp/Sababa-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = Sababa;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -609,10 +623,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SababaApp/SababaApp-Prefix.pch";
-				INFOPLIST_FILE = "SababaApp/SababaApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SababaApp/Sababa-Prefix.pch";
+				INFOPLIST_FILE = "SababaApp/Sababa-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = Sababa;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -633,8 +650,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SababaAppTests/SababaAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SababaAppTests/SababaTests-Info.plist";
+				PRODUCT_NAME = SababaTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -652,8 +669,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SababaApp/SababaApp-Prefix.pch";
-				INFOPLIST_FILE = "SababaAppTests/SababaAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SababaAppTests/SababaTests-Info.plist";
+				PRODUCT_NAME = SababaTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -662,7 +679,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		55B314C5187096D100B7A426 /* Build configuration list for PBXProject "SababaApp" */ = {
+		55B314C5187096D100B7A426 /* Build configuration list for PBXProject "Sababa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55B314FD187096D200B7A426 /* Debug */,
@@ -671,7 +688,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55B314FF187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaApp" */ = {
+		55B314FF187096D200B7A426 /* Build configuration list for PBXNativeTarget "Sababa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55B31500187096D200B7A426 /* Debug */,
@@ -680,7 +697,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55B31502187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaAppTests" */ = {
+		55B31502187096D200B7A426 /* Build configuration list for PBXNativeTarget "SababaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55B31503187096D200B7A426 /* Debug */,
