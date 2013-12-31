@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstOptionViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UIButton *continueButton;
+@property (strong, nonatomic) NSString *language;
 
++ (FirstOptionViewController *) sharedController;
 - (IBAction)continueAction:(id)sender;
 
 @end

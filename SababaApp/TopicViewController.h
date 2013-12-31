@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingView;
 
+- (IBAction)settingsButton:(id)sender;
 
 @end

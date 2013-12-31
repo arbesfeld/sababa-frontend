@@ -75,6 +75,12 @@
             
             break;
             
+        case 8:
+            _titleLabel.text = @"Random";
+            _imageView.image = [UIImage imageNamed:@"random-icon.png"];
+            
+            break;
+            
         default:
             break;
     }
@@ -91,7 +97,7 @@
 
 -(void) selectSpecial
 {
-    self.backgroundColor = [UIColor colorWithHue:_index/8.0 saturation:0.3 brightness:0.85 alpha:1.0];
+    self.backgroundColor = [UIColor colorWithHue:_index/9.0 saturation:0.3 brightness:0.85 alpha:1.0];
 }
 
 -(void) deselect

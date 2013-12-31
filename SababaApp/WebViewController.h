@@ -7,13 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreText/CoreText.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import "TTTAttributedLabel.h"
 
-@interface WebViewController : UIViewController
+@interface WebViewController : UIViewController <UIAlertViewDelegate, TTTAttributedLabelDelegate, NSURLConnectionDelegate> {
+    NSString *_answerText;
+    int _answerNum;
+    NSMutableData *_translationData;
+}
+@property (weak, nonatomic) IBOutlet UILabel *translateLabel;
 
 @property (strong, nonatomic) UILabel *titleLabel;
-@property (strong, nonatomic) UILabel *contentLabel;
+@property (strong, nonatomic) TTTAttributedLabel *contentLabel;
 @property (strong, nonatomic) UIScrollView *scrollView;
 
+-(void) nextArticle;
 -(void) setContent:(NSDictionary *)args;
 
 @end

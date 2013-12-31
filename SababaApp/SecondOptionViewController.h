@@ -12,6 +12,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *continueButton;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (weak, nonatomic) IBOutlet UIPickerView *numberPickerView;
+
 - (IBAction)continueAction:(id)sender;
 
 @end

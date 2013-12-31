@@ -14,16 +14,25 @@
 
 @implementation FirstOptionViewController
 
+FirstOptionViewController *_sharedController;
+
++ (FirstOptionViewController *)sharedController {
+    return _sharedController;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"set"]) {
-        NSLog(@"seen");
         UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TopicViewController"];
-        [self.navigationController presentViewController:viewController animated:YES completion:nil];
+        
+        [self.navigationController pushViewController:viewController animated:YES];
     }
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"set"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [_pickerView selectRow:4 inComponent:0 animated:NO];
+    _sharedController = self;
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
@@ -62,35 +71,7 @@
 
 - (IBAction)continueAction:(id)sender {
     NSUInteger selectedRow = [_pickerView selectedRowInComponent:0];
-    NSString *language = [[_pickerView delegate] pickerView:_pickerView titleForRow:selectedRow forComponent:0];
-    
-    NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
-    NSString *idString = [oNSUUID UUIDString];
-    
-    NSString *postURL = [NSString stringWithFormat:@"%@user/%@", BASE_URL, idString];
-    NSDictionary *json = [[NSDictionary alloc] initWithObjectsAndKeys:
-                         language, @"native",
-                         nil];
-    NSError *error;
-    NSData *postData = [NSJSONSerialization dataWithJSONObject:json options:0 error:&error];
-    
-    NSLog(@"POST: %@", postURL);
-    NSLog(@"POST_DATA: %@", json);
-
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:postURL]];
-    [request setHTTPMethod: @"POST"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"content-type"];
-    [request setHTTPBody:postData ];
-    
-    NSURLResponse *response;
-    NSError *err;
-    NSData *returnData = [ NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    NSString *content = [[NSString alloc] initWithData:returnData encoding:NSASCIIStringEncoding];
-    
-    if (err) {
-        NSLog(@"Error: %@", [err localizedDescription]);
-    }
-    NSLog(@"responseData: %@", content);
+    _language = [[_pickerView delegate] pickerView:_pickerView titleForRow:selectedRow forComponent:0];
 }
 
 @end

@@ -24,18 +24,26 @@
     self.navigationItem.hidesBackButton = YES;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self loading:NO];
+}
+
 - (void)loading:(BOOL)isLoading
 {
     if (isLoading) {
         _loadingView.hidden = NO;
-        for (int i = 0; i < 8; i++) {
+        [_collectionView setAllowsSelection:NO];
+        for (int i = 0; i < 9; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
             TopicCell *cell = (TopicCell *)[_collectionView cellForItemAtIndexPath:indexPath];
             [cell select];
         }
     } else {
         _loadingView.hidden = YES;
-        for (int i = 0; i < 8; i++) {
+        [_collectionView setAllowsSelection:YES];
+        for (int i = 0; i < 9; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
             TopicCell *cell = (TopicCell *)[_collectionView cellForItemAtIndexPath:indexPath];
             [cell deselect];
@@ -46,7 +54,7 @@
 #pragma mark - UICollectionView Datasource
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-    return 8;
+    return 9;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
@@ -114,7 +122,8 @@
     
     WebViewController *webViewer = [self.storyboard instantiateViewControllerWithIdentifier:@"WebViewController"];
     [webViewer setContent:json];
-    [self presentViewController:webViewer animated:YES completion:nil];
+    webViewer.navigationItem.hidesBackButton = YES;
+    [self.navigationController pushViewController:webViewer animated:YES];
 }
 
 #pragma mark – UICollectionViewDelegateFlowLayout
@@ -129,4 +138,7 @@
     return UIEdgeInsetsMake(18, 18, 18, 18);
 }
 
+- (IBAction)settingsButton:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"set"];
+}
 @end

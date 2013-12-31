@@ -7,6 +7,7 @@
 //
 
 #import "SecondOptionViewController.h"
+#import "FirstOptionViewController.h"
 
 @interface SecondOptionViewController ()
 
@@ -17,7 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    [_pickerView selectRow:1 inComponent:0 animated:NO];
+    [_numberPickerView selectRow:4 inComponent:0 animated:NO];
 }
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
     
@@ -26,10 +29,17 @@
 
 - (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
     
-    return 8;
+    if (thePickerView == _numberPickerView) {
+        return 10;
+    }
+    return 3;
 }
 
 - (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    if (thePickerView == _numberPickerView) {
+        return [NSString stringWithFormat:@"%d",row + 1];
+    }
+    
     switch (row) {
         case 0:
             return @"English";
@@ -37,16 +47,6 @@
             return @"French";
         case 2:
             return @"Hebrew";
-        case 3:
-            return @"Spanish";
-        case 4:
-            return @"Italian";
-        case 5:
-            return @"Mandarin";
-        case 6:
-            return @"Japanese";
-        case 7:
-            return @"German";
         default:
             NSAssert(false, @"Not supported");
             return @"";
@@ -59,10 +59,18 @@
     
     NSUUID *oNSUUID = [[UIDevice currentDevice] identifierForVendor];
     NSString *idString = [oNSUUID UUIDString];
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
     
+    float floatLevel = [[[_numberPickerView delegate] pickerView:_numberPickerView titleForRow:[_numberPickerView selectedRowInComponent:0] forComponent:0] floatValue] / 10.0;
+    NSNumber *level = [NSNumber numberWithFloat:floatLevel];
     NSString *postURL = [NSString stringWithFormat:@"%@user/%@", BASE_URL, idString];
+    NSString *nativeLanguage = [FirstOptionViewController sharedController].language;
+    
     NSDictionary *json = [[NSDictionary alloc] initWithObjectsAndKeys:
-                          language, @"native",
+                          nativeLanguage, @"native",
+                          language, @"learning",
+                          level, @"level",
                           nil];
     NSError *error;
     NSData *postData = [NSJSONSerialization dataWithJSONObject:json options:0 error:&error];
