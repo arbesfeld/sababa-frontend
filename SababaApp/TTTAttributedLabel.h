@@ -361,7 +361,8 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
  @param url The URL for the selected link.
  */
 - (void)attributedLabel:(TTTAttributedLabel *)label
-   didSelectLinkWithURL:(NSURL *)url;
+   didSelectLinkWithURL:(NSURL *)url
+               location:(UITouch *)touch;
 
 /**
  Tells the delegate that the user did select a link to an address.

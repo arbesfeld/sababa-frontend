@@ -16,7 +16,7 @@
     int _answerNum;
     NSMutableData *_translationData;
 }
-@property (weak, nonatomic) IBOutlet UILabel *translateLabel;
+@property (strong, nonatomic) UILabel *translateLabel;
 
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) TTTAttributedLabel *contentLabel;
